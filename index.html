@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RRB NTPC CBT-1 Interactive Guide</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 4h18v2H3zM3 9h18v2H3zM3 14h12v2H3zM3 19h12v2H3z" fill="#1f5fbf"/>
+      </svg>
+      <span>RRB NTPC CBT‑1 Interactive Guide</span>
+    </div>
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="Search sections, topics, subtopics & questions…" />
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="learn">Learn</button>
+    <button class="tab" data-tab="quiz">Quiz Mode</button>
+    <button class="tab" data-tab="import">Import / Export</button>
+    <button class="tab" data-tab="about">About</button>
+  </nav>
+
+  <main>
+    <nav id="breadcrumb"></nav>
+    <section id="panel-learn" class="panel visible">
+      <div id="content"></div>
+    </section>
+
+    <section id="panel-quiz" class="panel">
+      <div class="quiz-setup">
+        <h2>Start a Quiz</h2>
+        <div class="grid-2">
+          <div>
+            <label>Scope</label>
+            <select id="quizScope">
+              <option value="all">All Sections</option>
+              <option value="section">Specific Section</option>
+              <option value="topic">Specific Topic</option>
+              <option value="subtopic">Specific Subtopic</option>
+            </select>
+          </div>
+          <div>
+            <label>Number of Questions</label>
+            <input id="quizCount" type="number" min="5" max="100" value="10" />
+          </div>
+          <div id="scopePickers" class="scope-pickers"></div>
+          <div>
+            <label><input id="quizShuffle" type="checkbox" checked /> Shuffle</label>
+            <label><input id="quizTimer" type="checkbox" /> Timer (30s/question)</label>
+          </div>
+        </div>
+        <button id="startQuiz" class="primary">Start Quiz</button>
+      </div>
+      <div id="quizArea" class="quiz-area hidden"></div>
+    </section>
+
+    <section id="panel-import" class="panel">
+      <h2>Import / Export Questions</h2>
+      <p>Import your own dataset (JSON or CSV) to add real previous-year questions you have the right to use. Your data stays in your browser (no server). You can also export/backup at any time.</p>
+      <div class="grid-2">
+        <div>
+          <h3>Import</h3>
+          <input type="file" id="fileInput" accept=".json,.csv" />
+          <button id="btnImport">Import</button>
+          <p class="hint">CSV columns: section,topic,subtopic,question,optA,optB,optC,optD,answer,explanation,source</p>
+          <button id="btnDownloadTemplateJSON">Download JSON template</button>
+          <button id="btnDownloadTemplateCSV">Download CSV template</button>
+        </div>
+        <div>
+          <h3>Export</h3>
+          <button id="btnExportJSON">Export merged JSON</button>
+          <button id="btnReset">Reset to sample data</button>
+        </div>
+      </div>
+      <div id="importLog" class="import-log"></div>
+    </section>
+
+    <section id="panel-about" class="panel">
+      <h2>About & Legal</h2>
+      <p>This interactive guide is built for personal study. Previous-year question papers are generally protected by copyright. Please import only content that you created yourself, have permission to use, or is clearly licensed for reuse.</p>
+      <h3>Where to legally access previous-year papers</h3>
+      <ul>
+        <li><a href="https://www.adda247.com/jobs/rrb-ntpc-previous-year-question-paper/" target="_blank" rel="noopener">Adda247 – RRB NTPC Previous Year Question Papers</a></li>
+        <li><a href="https://www.sscadda.com/rrb-ntpc-previous-year-papers/" target="_blank" rel="noopener">SSCADDA – RRB NTPC Previous Year Question Papers</a></li>
+        <li><a href="https://testbook.com/blog/rrb-ntpc-question-paper-2025-out/" target="_blank" rel="noopener">Testbook – RRB NTPC 2025 Question Papers (Memory-based)</a></li>
+        <li><a href="https://prepp.in/rrb-ntpc-exam/practice-papers" target="_blank" rel="noopener">Prepp – RRB NTPC Question Papers (links)</a></li>
+        <li><a href="https://rrbsecunderabad.gov.in/archive_type/question-papers/" target="_blank" rel="noopener">RRB Secunderabad (archived papers/guidance)</a></li>
+      </ul>
+      <p>Once you download, you can convert those PDFs into CSV/JSON (respecting their terms) and import here for private study.</p>
+    </section>
+  </main>
+
+  <footer class="app-footer">Made for study by you — data is saved in your browser (localStorage).</footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

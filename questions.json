@@ -1,0 +1,98 @@
+{
+  "General Awareness": {
+    "History": {
+      "Ancient India": [
+        {
+          "q": "Which inscription of Ashoka mentions dhamma?",
+          "options": [
+            "Rummindei",
+            "Hathigumpha",
+            "Junagadh",
+            "Aihole"
+          ],
+          "answer": 0,
+          "explanation": "Rummindei pillar inscription records Ashoka's visit to Lumbini.",
+          "source": "modeled"
+        },
+        {
+          "q": "The Indus script remains undeciphered due to?",
+          "options": [
+            "Short inscriptions",
+            "Lack of bilinguals",
+            "Unknown language",
+            "All of these"
+          ],
+          "answer": 3,
+          "explanation": "Short texts and no bilingual inscriptions hinder decoding.",
+          "source": "modeled"
+        }
+      ],
+      "Modern India": [
+        {
+          "q": "Dandi March was launched to protest against?",
+          "options": [
+            "Land tax",
+            "Salt tax",
+            "Rowlatt Act",
+            "Simon Commission"
+          ],
+          "answer": 1,
+          "explanation": "Salt Satyagraha challenged the British salt monopoly.",
+          "source": "modeled"
+        }
+      ]
+    },
+    "Polity": {
+      "Constitution": [
+        {
+          "q": "Right to Equality is enshrined in Articles?",
+          "options": [
+            "12-17",
+            "19-22",
+            "25-28",
+            "32"
+          ],
+          "answer": 0,
+          "explanation": "Articles 14-18 cover Equality; Art 12-13 define State and laws. (Exam-oriented framing)",
+          "source": "modeled"
+        }
+      ]
+    }
+  },
+  "Mathematics": {
+    "Arithmetic": {
+      "Percentages": [
+        {
+          "q": "What is 20% of 150?",
+          "options": [
+            "25",
+            "30",
+            "35",
+            "40"
+          ],
+          "answer": 1,
+          "explanation": "20% of 150 = 0.2\u00d7150 = 30.",
+          "source": "modeled"
+        }
+      ]
+    }
+  },
+  "Reasoning": {
+    "Analogies": {
+      "Word Analogies": [
+        {
+          "q": "Book : Reading :: Fork : ?",
+          "options": [
+            "Cutting",
+            "Cooking",
+            "Stirring",
+            "Eating"
+          ],
+          "answer": 3,
+          "explanation": "A fork is used for eating.",
+          "source": "modeled"
+        }
+      ]
+    }
+  }
+}
