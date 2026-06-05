@@ -2,8 +2,7 @@
   "meta": {
     "app": "RRB NTPC CBT-1",
     "version": "1.0",
-    "lastUpdated": "2026-06-05",
-    "totalQuestions": 3
+    "totalQuestions": 10
   },
 
   "sections": [
@@ -16,40 +15,62 @@
           "name": "History",
           "subtopics": [
             {
-              "id": "ancient-history",
-              "name": "Ancient History",
+              "id": "modern-history",
+              "name": "Modern History",
               "questions": [
                 {
                   "id": "GA-HIS-001",
-                  "question": "Who founded the Maurya Empire?",
+                  "question": "Who was the first Governor-General of India?",
                   "options": {
-                    "A": "Ashoka",
-                    "B": "Chandragupta Maurya",
-                    "C": "Bindusara",
-                    "D": "Harsha"
+                    "A": "Lord Curzon",
+                    "B": "Lord William Bentinck",
+                    "C": "Lord Mountbatten",
+                    "D": "Warren Hastings"
                   },
-                  "answer": "B",
-                  "explanation": "Chandragupta Maurya founded the Maurya Empire in 322 BCE.",
+                  "answer": "D",
+                  "explanation": "Warren Hastings was the first Governor-General of Bengal.",
                   "difficulty": "easy",
-                  "year": 2019,
-                  "source": "RRB NTPC",
-                  "tags": ["history", "empire"]
+                  "year": 2019
                 },
                 {
                   "id": "GA-HIS-002",
-                  "question": "Rigveda is dedicated to which deity?",
+                  "question": "In which year did India gain independence?",
                   "options": {
-                    "A": "Indra",
-                    "B": "Agni",
-                    "C": "Varuna",
-                    "D": "All of the above"
+                    "A": "1945",
+                    "B": "1946",
+                    "C": "1947",
+                    "D": "1950"
                   },
-                  "answer": "D",
-                  "explanation": "Rigveda contains hymns for multiple gods including Indra, Agni, and Varuna.",
-                  "difficulty": "medium",
-                  "year": 2018,
-                  "source": "RRB NTPC",
-                  "tags": ["vedas"]
+                  "answer": "C",
+                  "explanation": "India became independent on 15 August 1947.",
+                  "difficulty": "easy",
+                  "year": 2020
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": "geography",
+          "name": "Geography",
+          "subtopics": [
+            {
+              "id": "indian-geography",
+              "name": "Indian Geography",
+              "questions": [
+                {
+                  "id": "GA-GEO-001",
+                  "question": "Which is the longest river in India?",
+                  "options": {
+                    "A": "Yamuna",
+                    "B": "Ganga",
+                    "C": "Godavari",
+                    "D": "Krishna"
+                  },
+                  "answer": "B",
+                  "explanation": "Ganga is the longest river in India.",
+                  "difficulty": "easy"
                 }
               ]
             }
@@ -72,19 +93,107 @@
               "questions": [
                 {
                   "id": "MATH-001",
-                  "question": "What is 20% of 250?",
+                  "question": "What is 25% of 200?",
                   "options": {
-                    "A": "40",
+                    "A": "25",
                     "B": "50",
-                    "C": "60",
-                    "D": "70"
+                    "C": "75",
+                    "D": "100"
                   },
                   "answer": "B",
-                  "explanation": "20% of 250 = (20/100)*250 = 50.",
-                  "difficulty": "easy",
-                  "year": 2020,
-                  "source": "RRB NTPC",
-                  "tags": ["percentage"]
+                  "explanation": "25% of 200 = 50",
+                  "difficulty": "easy"
+                },
+                {
+                  "id": "MATH-002",
+                  "question": "Increase 100 by 20%",
+                  "options": {
+                    "A": "110",
+                    "B": "115",
+                    "C": "120",
+                    "D": "125"
+                  },
+                  "answer": "C",
+                  "explanation": "20% of 100 = 20, so total = 120",
+                  "difficulty": "easy"
+                }
+              ]
+            },
+
+            {
+              "id": "profit-loss",
+              "name": "Profit and Loss",
+              "questions": [
+                {
+                  "id": "MATH-003",
+                  "question": "If CP = 100 and SP = 120, find profit (%)",
+                  "options": {
+                    "A": "10%",
+                    "B": "15%",
+                    "C": "20%",
+                    "D": "25%"
+                  },
+                  "answer": "C",
+                  "explanation": "Profit = 20 → 20%",
+                  "difficulty": "easy"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "reasoning",
+      "name": "General Intelligence & Reasoning",
+      "topics": [
+        {
+          "id": "coding-decoding",
+          "name": "Coding-Decoding",
+          "subtopics": [
+            {
+              "id": "letter-coding",
+              "name": "Letter Coding",
+              "questions": [
+                {
+                  "id": "REAS-001",
+                  "question": "If CAT = DBU, what is DOG?",
+                  "options": {
+                    "A": "EPH",
+                    "B": "CNG",
+                    "C": "BMF",
+                    "D": "FQI"
+                  },
+                  "answer": "A",
+                  "explanation": "Each letter shifts +1 → DOG → EPH",
+                  "difficulty": "medium"
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": "series",
+          "name": "Number Series",
+          "subtopics": [
+            {
+              "id": "missing-number",
+              "name": "Missing Number",
+              "questions": [
+                {
+                  "id": "REAS-002",
+                  "question": "2, 4, 8, 16, ?",
+                  "options": {
+                    "A": "18",
+                    "B": "24",
+                    "C": "32",
+                    "D": "30"
+                  },
+                  "answer": "C",
+                  "explanation": "Each number is multiplied by 2",
+                  "difficulty": "easy"
                 }
               ]
             }
