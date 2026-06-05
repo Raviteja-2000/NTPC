@@ -1,104 +1,118 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RRB NTPC CBT-1 Interactive Guide</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RRB NTPC CBT-1 Interactive Guide</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f5f7fb; }
+header { display:flex; justify-content:space-between; padding:10px 20px; background:#1f5fbf; color:white; }
+.brand { display:flex; align-items:center; gap:10px; font-weight:bold; }
+.tabs { display:flex; background:#eee; }
+.tab { padding:10px 15px; border:none; cursor:pointer; }
+.tab.active { background:#1f5fbf; color:white; }
+.panel { display:none; padding:20px; }
+.panel.visible { display:block; }
+button { cursor:pointer; padding:6px 12px; }
+.primary { background:#1f5fbf; color:white; border:none; }
+.quiz-area { margin-top:20px; }
+.hidden { display:none; }
+</style>
 </head>
+
 <body>
-  <header class="app-header">
-    <div class="brand">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 4h18v2H3zM3 9h18v2H3zM3 14h12v2H3zM3 19h12v2H3z" fill="#1f5fbf"/>
-      </svg>
-      <span>RRB NTPC CBT‑1 Interactive Guide</span>
+
+<header>
+  <div class="brand">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 4h18v2H3zM3 9h18v2H3zM3 14h12v2H3zM3 19h12v2H3z" fill="white"/>
+    </svg>
+    <span>RRB NTPC CBT‑1 Guide</span>
+  </div>
+
+  <div>
+    <input id="searchInput" placeholder="Search...">
+    <button onclick="search()">Search</button>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" onclick="openTab('learn', this)">Learn</button>
+  <button class="tab" onclick="openTab('quiz', this)">Quiz</button>
+  <button class="tab" onclick="openTab('about', this)">About</button>
+</nav>
+
+<main>
+  <section id="learn" class="panel visible">
+    <h2>Learn Section</h2>
+    <p>Select topics and start learning.</p>
+  </section>
+
+  <section id="quiz" class="panel">
+    <h2>Quiz Mode</h2>
+
+    <button class="primary" onclick="startQuiz()">Start Quiz</button>
+
+    <div id="quizBox" class="quiz-area hidden">
+      <p id="question"></p>
+      <button onclick="answer('A')">A</button>
+      <button onclick="answer('B')">B</button>
+      <button onclick="answer('C')">C</button>
+      <button onclick="answer('D')">D</button>
+      <p id="result"></p>
     </div>
-    <div class="search-box">
-      <input id="searchInput" type="search" placeholder="Search sections, topics, subtopics & questions…" />
-      <button id="searchBtn">Search</button>
-    </div>
-  </header>
+  </section>
 
-  <nav class="tabs">
-    <button class="tab active" data-tab="learn">Learn</button>
-    <button class="tab" data-tab="quiz">Quiz Mode</button>
-    <button class="tab" data-tab="import">Import / Export</button>
-    <button class="tab" data-tab="about">About</button>
-  </nav>
+  <section id="about" class="panel">
+    <h2>About</h2>
+    <ul>
+      <li>https://www.adda247.com/jobs/rrb-ntpc-previous-year-question-paper/</li>
+      <li><a href="https://www.sscadda.com/rrb-ntpc-previous-year-papers/" target="_blank">SSCADDA Papers</a></li>
+      <li><a href="https://testbook.com/blog/rrb-ntpc-question-paper-2025-out/" target="_blank">Testbook Papers</a></li>
+      <li><a href="https://prepp.in/rrb-ntpc-exam/practice-papers" target="_blank">Prepp Papers</a></li>
+    </ul>
+  </section>
+</main>
 
-  <main>
-    <nav id="breadcrumb"></nav>
-    <section id="panel-learn" class="panel visible">
-      <div id="content"></div>
-    </section>
+<script>
+function openTab(tab, el){
+ document.querySelectorAll('.panel').forEach(p=>p.classList.remove('visible'));
+ document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+ document.getElementById(tab).classList.add('visible');
+ el.classList.add('active');
+}
 
-    <section id="panel-quiz" class="panel">
-      <div class="quiz-setup">
-        <h2>Start a Quiz</h2>
-        <div class="grid-2">
-          <div>
-            <label>Scope</label>
-            <select id="quizScope">
-              <option value="all">All Sections</option>
-              <option value="section">Specific Section</option>
-              <option value="topic">Specific Topic</option>
-              <option value="subtopic">Specific Subtopic</option>
-            </select>
-          </div>
-          <div>
-            <label>Number of Questions</label>
-            <input id="quizCount" type="number" min="5" max="100" value="10" />
-          </div>
-          <div id="scopePickers" class="scope-pickers"></div>
-          <div>
-            <label><input id="quizShuffle" type="checkbox" checked /> Shuffle</label>
-            <label><input id="quizTimer" type="checkbox" /> Timer (30s/question)</label>
-          </div>
-        </div>
-        <button id="startQuiz" class="primary">Start Quiz</button>
-      </div>
-      <div id="quizArea" class="quiz-area hidden"></div>
-    </section>
+function search(){
+ let val = document.getElementById('searchInput').value;
+ alert('Searching: '+val);
+}
 
-    <section id="panel-import" class="panel">
-      <h2>Import / Export Questions</h2>
-      <p>Import your own dataset (JSON or CSV) to add real previous-year questions you have the right to use. Your data stays in your browser (no server). You can also export/backup at any time.</p>
-      <div class="grid-2">
-        <div>
-          <h3>Import</h3>
-          <input type="file" id="fileInput" accept=".json,.csv" />
-          <button id="btnImport">Import</button>
-          <p class="hint">CSV columns: section,topic,subtopic,question,optA,optB,optC,optD,answer,explanation,source</p>
-          <button id="btnDownloadTemplateJSON">Download JSON template</button>
-          <button id="btnDownloadTemplateCSV">Download CSV template</button>
-        </div>
-        <div>
-          <h3>Export</h3>
-          <button id="btnExportJSON">Export merged JSON</button>
-          <button id="btnReset">Reset to sample data</button>
-        </div>
-      </div>
-      <div id="importLog" class="import-log"></div>
-    </section>
+let questions = [
+ {q:"2+2=?", a:"A", opts:{A:"4",B:"3",C:"5",D:"6"}}
+];
+let current = 0;
 
-    <section id="panel-about" class="panel">
-      <h2>About & Legal</h2>
-      <p>This interactive guide is built for personal study. Previous-year question papers are generally protected by copyright. Please import only content that you created yourself, have permission to use, or is clearly licensed for reuse.</p>
-      <h3>Where to legally access previous-year papers</h3>
-      <ul>
-        <li><a href="https://www.adda247.com/jobs/rrb-ntpc-previous-year-question-paper/" target="_blank" rel="noopener">Adda247 – RRB NTPC Previous Year Question Papers</a></li>
-        <li><a href="https://www.sscadda.com/rrb-ntpc-previous-year-papers/" target="_blank" rel="noopener">SSCADDA – RRB NTPC Previous Year Question Papers</a></li>
-        <li><a href="https://testbook.com/blog/rrb-ntpc-question-paper-2025-out/" target="_blank" rel="noopener">Testbook – RRB NTPC 2025 Question Papers (Memory-based)</a></li>
-        <li><a href="https://prepp.in/rrb-ntpc-exam/practice-papers" target="_blank" rel="noopener">Prepp – RRB NTPC Question Papers (links)</a></li>
-        <li><a href="https://rrbsecunderabad.gov.in/archive_type/question-papers/" target="_blank" rel="noopener">RRB Secunderabad (archived papers/guidance)</a></li>
-      </ul>
-      <p>Once you download, you can convert those PDFs into CSV/JSON (respecting their terms) and import here for private study.</p>
-    </section>
-  </main>
+function startQuiz(){
+ document.getElementById('quizBox').classList.remove('hidden');
+ loadQuestion();
+}
 
-  <footer class="app-footer">Made for study by you — data is saved in your browser (localStorage).</footer>
+function loadQuestion(){
+ let q = questions[current];
+ document.getElementById('question').innerText = q.q;
+}
 
-<script src="script.js"></script>
+function answer(opt){
+ let q = questions[current];
+ if(opt===q.a){
+   document.getElementById('result').innerText = "Correct ✅";
+ } else {
+   document.getElementById('result').innerText = "Wrong ❌";
+ }
+}
+</script>
+
 </body>
 </html>
