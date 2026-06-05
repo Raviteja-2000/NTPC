@@ -1,62 +1,96 @@
-[
-  {
-    "section": "General Awareness",
-    "topic": "History",
-    "subtopic": "Ancient India",
-    "question": "Which inscription of Ashoka mentions dhamma?",
-    "options": ["Rummindei", "Hathigumpha", "Junagadh", "Aihole"],
-    "answer": 0,
-    "explanation": "Rummindei pillar inscription records Ashoka's visit to Lumbini.",
-    "source": "modeled"
+{
+  "meta": {
+    "app": "RRB NTPC CBT-1",
+    "version": "1.0",
+    "lastUpdated": "2026-06-05",
+    "totalQuestions": 3
   },
-  {
-    "section": "General Awareness",
-    "topic": "History",
-    "subtopic": "Ancient India",
-    "question": "The Indus script remains undeciphered due to?",
-    "options": ["Short inscriptions", "Lack of bilinguals", "Unknown language", "All of these"],
-    "answer": 3,
-    "explanation": "Short texts and no bilingual inscriptions hinder decoding.",
-    "source": "modeled"
-  },
-  {
-    "section": "General Awareness",
-    "topic": "History",
-    "subtopic": "Modern India",
-    "question": "Dandi March was launched to protest against?",
-    "options": ["Land tax", "Salt tax", "Rowlatt Act", "Simon Commission"],
-    "answer": 1,
-    "explanation": "Salt Satyagraha challenged the British salt monopoly.",
-    "source": "modeled"
-  },
-  {
-    "section": "General Awareness",
-    "topic": "Polity",
-    "subtopic": "Constitution",
-    "question": "Right to Equality is enshrined in Articles?",
-    "options": ["12-17", "19-22", "25-28", "32"],
-    "answer": 0,
-    "explanation": "Articles 14-18 cover Equality.",
-    "source": "modeled"
-  },
-  {
-    "section": "Mathematics",
-    "topic": "Arithmetic",
-    "subtopic": "Percentages",
-    "question": "What is 20% of 150?",
-    "options": ["25", "30", "35", "40"],
-    "answer": 1,
-    "explanation": "20% of 150 = 30.",
-    "source": "modeled"
-  },
-  {
-    "section": "Reasoning",
-    "topic": "Analogies",
-    "subtopic": "Word Analogies",
-    "question": "Book : Reading :: Fork : ?",
-    "options": ["Cutting", "Cooking", "Stirring", "Eating"],
-    "answer": 3,
-    "explanation": "A fork is used for eating.",
-    "source": "modeled"
-  }
-]
+
+  "sections": [
+    {
+      "id": "general-awareness",
+      "name": "General Awareness",
+      "topics": [
+        {
+          "id": "history",
+          "name": "History",
+          "subtopics": [
+            {
+              "id": "ancient-history",
+              "name": "Ancient History",
+              "questions": [
+                {
+                  "id": "GA-HIS-001",
+                  "question": "Who founded the Maurya Empire?",
+                  "options": {
+                    "A": "Ashoka",
+                    "B": "Chandragupta Maurya",
+                    "C": "Bindusara",
+                    "D": "Harsha"
+                  },
+                  "answer": "B",
+                  "explanation": "Chandragupta Maurya founded the Maurya Empire in 322 BCE.",
+                  "difficulty": "easy",
+                  "year": 2019,
+                  "source": "RRB NTPC",
+                  "tags": ["history", "empire"]
+                },
+                {
+                  "id": "GA-HIS-002",
+                  "question": "Rigveda is dedicated to which deity?",
+                  "options": {
+                    "A": "Indra",
+                    "B": "Agni",
+                    "C": "Varuna",
+                    "D": "All of the above"
+                  },
+                  "answer": "D",
+                  "explanation": "Rigveda contains hymns for multiple gods including Indra, Agni, and Varuna.",
+                  "difficulty": "medium",
+                  "year": 2018,
+                  "source": "RRB NTPC",
+                  "tags": ["vedas"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "topics": [
+        {
+          "id": "arithmetic",
+          "name": "Arithmetic",
+          "subtopics": [
+            {
+              "id": "percentage",
+              "name": "Percentage",
+              "questions": [
+                {
+                  "id": "MATH-001",
+                  "question": "What is 20% of 250?",
+                  "options": {
+                    "A": "40",
+                    "B": "50",
+                    "C": "60",
+                    "D": "70"
+                  },
+                  "answer": "B",
+                  "explanation": "20% of 250 = (20/100)*250 = 50.",
+                  "difficulty": "easy",
+                  "year": 2020,
+                  "source": "RRB NTPC",
+                  "tags": ["percentage"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
